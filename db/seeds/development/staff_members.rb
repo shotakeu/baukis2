@@ -5,5 +5,6 @@ StaffMember.create!(
   family_name_kana: "ヤマダ",
   given_name_kana: "タロウ",
   password: "password",
+  suspended: false,
   start_date: Date.today
 )
