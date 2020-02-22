@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     root "top#index"
     get "login" => "sessions#new", as: :login
     post "session" => "sessions#create", as: :session
-    destroy "session" => "sessions#destroy"
+    delete "session" => "sessions#destroy"
   end
 
   namespace :admin do
