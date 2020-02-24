@@ -11,8 +11,7 @@ class Staff::SessionsController < Staff::Base
   def create
     @form = Staff::LoginForm.new(login_form_params)
     if @form.email.present?
-      staff_member = 
-        StaffMember.find_by("LOWER(email) = ?", @form.email.downcase)
+      staff_member = StaffMember.find_by("LOWER(email) = ?", @form.email.downcase)
     end
     if Staff::Authenticator.new(staff_member).authenticate(@form.password)
       if staff_member.suspended?
@@ -29,7 +28,7 @@ class Staff::SessionsController < Staff::Base
     end
   end
 
-  private def logion_form_params
+  private def login_form_params
     params.require(:staff_login_form).permit(:email, :password)
   end
 
