@@ -3,6 +3,7 @@
 
 <div class="table-wrapper">
   <div class="links">
+    <%= link_to "職員のログインログアウト一覧", :admin_staff_events %>
     <%= link_to "新規登録", :new_admin_staff_member %>
   </div>
 
@@ -27,7 +28,7 @@
           <%= m.suspended? ? raw("&#x2611;") : raw("&#x2610;") %></td>
         <td class="actions">
           <%= link_to "編集", [:edit, :admin, m] %> |
-          <%= link_to "Events", [ :admin, m, :staff_events ] %>
+          <%= link_to "Events", [ :admin, m, :staff_events ] %> |
           <%= link_to "削除", [:admin, m], method: :delete,
             data: { confirm: "本当に削除しますか?" } %>
         </td>
