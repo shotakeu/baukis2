@@ -4,9 +4,9 @@ class Admin::StaffEventsController < Admin::Base
       @staff_member = StaffMember.find(params[:staff_member_id])
       @events = @staff_member.events.order(occurred_at: :desc)
     else
-      @events = StaffEvent.order(occurred_at: :desc)
+      @events = StaffEvent
     end
-    @events = @events.includes(:member)
-    @events = @events.page(params[:page])
+    @events =
+      @events.order(occurred_at: :desc).includes(:member).page(params[:page])
   end
 end
