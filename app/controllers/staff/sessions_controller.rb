@@ -39,7 +39,7 @@ class Staff::SessionsController < Staff::Base
 
   def destroy
     if current_staff_member
-      current_staff_member.events.create!(type: "logged_out") # 同じ職員がログアウトボタンを連打した時に備えてifで囲む
+      current_staff_member.events.create!(type: "logged_out")
     end
     session.delete(:staff_member_id)
     flash.notice = "ログアウトしました。"
