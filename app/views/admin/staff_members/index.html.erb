@@ -6,6 +6,8 @@
     <%= link_to "職員のログインログアウト一覧", :admin_staff_events %>
     <%= link_to "新規登録", :new_admin_staff_member %>
   </div>
+  
+  <%= paginate @staff_members %>
 
   <table class="listing">
     <tr>
@@ -35,7 +37,9 @@
       </tr>
     <% end %>
   </table>
-
+  
+  <%= paginate @staff_members %>
+  
   <div class="links">
     <%= link_to "新規登録", :new_admin_staff_member %>
   </div>
