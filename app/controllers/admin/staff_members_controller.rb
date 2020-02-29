@@ -27,7 +27,7 @@ class Admin::StaffMembersController < Admin::Base
       flash.notice = "職員アカウントを新規登録しました。"
       redirect_to :admin_staff_members
     else
-      render action "new"
+      render action: "new"
     end
   end
 
