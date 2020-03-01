@@ -10,7 +10,7 @@ class Admin::StaffMembersController < Admin::Base
   
   def show
     staff_member = StaffMember.find(params[:id])
-    retirect_to [:edit, :admin, staff_member]
+    redirect_to [:edit, :admin, staff_member]
   end
 
   def new
