@@ -11,7 +11,7 @@ class Staff::PasswordsController < Staff::Base
   def update
     @change_password_form = Staff::ChangePasswordForm.new(staff_member_params)
     @change_password_form.object = current_staff_member
-    if @change_password_.save
+    if @change_password_form.save
       flash.notice = "パスワードを変更しました。"
       redirect_to :staff_account
     else
