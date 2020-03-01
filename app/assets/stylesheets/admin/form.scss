@@ -20,11 +20,19 @@ div#wrapper {
           }
           label.required:after {
             content: "*";
-            padding-lef: $narrow;
+            padding-left: $narrow;
             color: $red;
           }
         }
-        div.checkboxes, div.radio-buttons {
+        div.input-block {
+          input { margin-right: $narrow * 2; }
+        }
+        div.notes {
+          text-align: right;
+          font-size: $small;
+          span.mark { color: $red; }
+        }
+        div.check-boxes, div.radio-buttons {
           label {
             display: inline-block;
           }
@@ -35,11 +43,16 @@ div#wrapper {
             padding: $wide $wide * 2;
           }
         }
-        div.filed_with_errors {
+        div.field_with_errors {
           display: inline;
           padding: 0;
           label { color: $red; }
           input { background-color: $pink; }
+        }
+        div.error-message {
+          color: $red;
+          font-size: $small;
+          padding: 0 $very_wide;
         }
       }
     }
