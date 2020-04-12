@@ -35,4 +35,8 @@ Bauskis2は企業向け顧客管理システム(Ruby on Rails 学習用サンプ
 
 * ...
 
+## refference
+
+https://github.com/kuroda/baukis2
+
 
