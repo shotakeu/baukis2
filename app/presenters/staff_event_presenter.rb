@@ -1,9 +1,9 @@
 class StaffEventPresenter < ModelPresenter
-  delegate :member, :description, :occured_at, to: :object
+  delegate :member, :description, :occurred_at, to: :object
 
   def table_row
     markup(:tr) do |m|
-      unless view_contet.instance_variable_get(:@staff_member)
+      unless view_context.instance_variable_get(:@staff_member)
         m.td do
           m << link_to(mmember.family_name + member.given_name,
             [ :admin, member, :staff_events])
