@@ -9,8 +9,7 @@
 			p.with_options(required: true, size: 32) do |q|
 				m << q.password_field_block(:current_password, "現在のパスワード")
 				m << q.password_field_block(:new_password, "新しいパスワード")
-				m << q.password_field_block(:new_password_confirmation
-					, "新しいパスワード")
+				m << q.password_field_block(:new_password_confirmation, "新しいパスワード")
 			end
 		end %>
     <div class="buttons">
